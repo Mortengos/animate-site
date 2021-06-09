@@ -100,8 +100,16 @@ article {
     text-align: center;
 
 }
-.s2 img {
-  transform: rotate(-5deg);
+  @keyframes spin {
+    from{
+    transform: rotateZ(0deg);
+    }
+    to{
+    transform: rotateZ(5deg);
+    }
+   }
+.s2 img{
+    animation: spin 1.3s linear alternate infinite;
 }
 .s2 svg {
     fill: var(--lblue);
@@ -112,4 +120,13 @@ article {
 }
 .s3 {
   background-color: var(--dblue);
+}
+.animate__animated.animate__zoomInDown {
+  --animate-duration: 2s;
+}
+.animate__animated.animate__heartBeat {
+  --animate-duration: 1.5s;
+}
+html {
+  scroll-behavior: smooth;
 }
